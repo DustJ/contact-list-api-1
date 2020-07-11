@@ -1,0 +1,126 @@
+:root {
+  --color-primary: hsl(215, 100%, 58%);
+  --color-primary-dark: hsl(215, 100%, 48%);
+  --color-primary-light: hsl(215, 95%, 63%);
+  --color-secondary: hsl(183, 100%, 70%);
+  --color-secondary-dark: hsl(183, 100%, 60%);
+  --color-secondary-light: hsl(183, 95%, 78%);
+  --color-accent: hsl(34, 100%, 44%);
+  --color-accent-dark: hsl(34, 100%, 34%);
+  --color-accent-light: hsl(34, 95%, 49%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-bg-light: hsl(240, 2%, 96%);
+  --color-bg-medium: hsl(240, 3%, 93%);
+  --color-bg-dark: hsl(240, 10%, 20%);
+  --color-bg-darker: hsl(240, 6%, 8%);
+  --color-shadow: hsl(228, 58%, 90%);
+  --color-shadow-inverted: hsl(228, 100%, 0%);
+  --color-font-heading: var(--color-black);
+  --color-font-heading-inverted: hsl(240, 16%, 88%);
+  --color-font-paragraph: hsl(240, 6%, 47%);
+  --color-font-paragraph-inverted: hsl(240, 21%, 80%);
+  --color-gradient-primary: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  --color-gradient-bg-fadeout: linear-gradient(90deg, var(--color-white), transparent);
+
+  --spacing-sm: 1rem;
+  --spacing-md: calc(var(--spacing-sm) * 2);
+  --spacing-lg: calc(var(--spacing-sm) * 4);
+  --spacing-section: calc(var(--spacing-sm) * 6);
+
+  --content-max-width: 48rem;
+
+  --border-radius-sm: calc(var(--border-radius) / 2);
+  --border-radius-md: 0.25rem;
+  --border-radius-lg: calc(var(--border-radius) * 2);
+
+  --shadow-simple-sm: 0 0.25rem 0.5rem var(--color-shadow);
+  --shadow-simple-md: 0 1rem 1.25rem var(--color-shadow);
+  --shadow-centered-sm: 1rem 2rem 0.5rem -1.5rem var(--color-shadow), -1rem 2rem 0.5rem -1.5rem var(--color-shadow);
+
+  --animation-hint: 0.2s cubic-bezier(.6,0,.3,1);
+  --animation-smooth: 0.4s cubic-bezier(.6,0,.3,1);
+  --animation-bounce: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --animation-ease-in: 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --animation-ease-in-out: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --animation-ease-out: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  --animation-ease-out-back: 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  background-color: var(--color-bg-medium);
+  color: var(--color-font-paragraph);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* ————————————————————————————————————————————————————————————————— */
+/* Fonts                                                             */
+/* ————————————————————————————————————————————————————————————————— */
+h1, h2, h3, h4, h5 {
+  color: var(--color-font-heading);
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 2.75rem 0 1.05rem;
+}
+
+h1 {
+  font-size: 4.209rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 3.998rem;
+}
+
+h3 {
+  font-size: 2.827rem;
+}
+
+h4 {
+  font-size: 1.9rem;
+}
+
+p {
+  letter-spacing: 0.02em;
+  margin-bottom: 1.15rem;
+}
+
+@media only screen and (min-width: 992px) {
+  h1 {
+    font-size: 5.653rem;
+  }
+}
+
+/* ————————————————————————————————————————————————————————————————— */
+/* Layout                                                            */
+/* ————————————————————————————————————————————————————————————————— */
+.contact-container {
+  background-color: var(--color-bg-light);
+  margin: 0 auto;
+  max-width: var(--content-max-width);
+}
+
+.user-list {
+  display: grid;
+  grid-gap: var(--spacing-md);
+  grid-template-columns: repeat(3, 1fr);
+  padding: var(--spacing-md);
+}
+
+.user-list__loading-indicator {
+  grid-column: 1 / -1;
+}
+
+.user-list__search-input {
+  display: block;
+}
+
+.user-list__user-card {
+  background-color: var(--color-white)
+}
